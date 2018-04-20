@@ -1,0 +1,12 @@
+<VirtualHost *:80>
+    ServerAdmin danilo@liberato.com.br
+    DocumentRoot "/eventos"
+    ServerName eventos.com
+    ServerAlias www.eventos.com
+
+    <Directory "/eventos">
+        AllowOverride All
+        Order allow,deny
+        Allow from all
+    </Directory>
+</VirtualHost>

@@ -1,0 +1,32 @@
+<?php if(!class_exists('Rain\Tpl')){exit;}?><div class="container-fluid bg-white">
+	<div class="row justify-content-center mt-5">
+		<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+			<img src="res/img/logo.png" class="image-fluid">
+			<h1 class="display-2">Liberato Eventos</h1>		
+		</div>
+	</div>
+	<br>
+	<div class="row text-center justify-content-center">
+	  <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 my-1">
+	    <div class="card bg-light">
+	      <div class="card-header text-center"><h2 class="card-title display-4">Escolha a sessão</h2></div>
+	      <div class="card-body text-center">
+	      	<div class="row">
+		      	<div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 my-2">
+			      	<a href="/eventos/login-admin" class="card-link">Sessão do Administrador</a>
+			      	<div class="card-text">
+			      		Sessão específica pra administradores de eventos.
+			      	</div>	      		
+		      	</div>
+				<div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 my-2">
+			        <a href="/eventos/participant-session" class="card-link">Sessão do Participante</a>
+			        <div class="card-text">
+			      		Sessão específica pra usuários, que queiram se inscrever em algum evento ou baixar algum certificado.
+			      	</div>				
+				</div>	      		
+	      	</div>	        
+	      </div>
+	    </div>
+	  </div>
+	</div>	
+</div>

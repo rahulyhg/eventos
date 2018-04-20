@@ -1,0 +1,39 @@
+<div class="container-fluid">
+	<div class="row mx-2">
+		<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 border rounded bg-white my-3 px-4 py-4">
+			<div class="text-center">
+				<h2 class="my-3 mx-3">Altere informações do seu evento</h2>
+			</div>
+			<hr>
+			<form data-js="form" method="POST" action="/eventos/admin/alter-event">
+				<div class="form-group">
+					<label for="nome-evento">Nome do evento: </label>
+					<input type="text" name="nome-evento" id="nome-evento" class="form-control" placeholder="Nome do evento" data-js="input" value="{$event.descricao_evento}">
+				</div>
+				<div class="form-group">
+					<label for="data-realizacao">Data de realização: </label>
+					<input type="date" name="data-realizacao" id="data-realizacao" class="form-control" placeholder="Data de realização" data-js="input" value="{$event.data}">
+				</div>
+				<div class="form-group">
+					<label for="horario">Horário: </label>
+					<input type="time" name="horario" id="horario" class="form-control" placeholder="Horário" data-js="input" value="{$event.hora}">
+				</div>
+				<div class="form-group">
+					<label for="endereco">Endereço: </label>
+					<select class="form-control" data-js="input" name="endereco" id="endereco">
+						{loop="$address"}
+							{if="$value.cod_endereco==$event.cod_endereco"}
+								<option value="{$value.cod_endereco}" selected> N° {$value.numero}, R. {$value.rua}, B. {$value.bairro}, {$value.cidade}, {$value.estado}, {$value.pais}</option>
+							{else}
+								<option value="{$value.cod_endereco}"> N° {$value.numero}, R. {$value.rua}, B. {$value.bairro}, {$value.cidade}, {$value.estado}, {$value.pais}</option>
+							{/if}
+						{/loop}
+					</select>
+				</div>				
+				<br>
+				<br>
+				<div class="text-center"><input type="submit" name="cadastrar" value="Cadastrar Evento" class="btn btn-success"></div>
+			</form>
+		</div>
+	</div>
+</div>

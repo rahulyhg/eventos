@@ -1,0 +1,13 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col border rounded bg-white my-3 mx-3 px-4 py-4">
+			<div class="text-center"><h2>Lista de eventos</h2></div>
+			<br>
+			<div class="list-group list-group-flush">
+				{loop="$events"}
+					<a href="/eventos/admin/event/{$value.cod_evento}" class="list-group-item list-group-item-action">{$value.descricao_evento}</a>
+				{/loop}
+			</div>				
+		</div>
+	</div>
+</div>
